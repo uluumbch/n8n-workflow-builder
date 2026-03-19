@@ -60,10 +60,10 @@ server.tool(
   {
     workflow: z.object({
       name: z.string().describe("Name of the workflow"),
-      nodes: z.array(z.any()).describe("Array of workflow nodes"),
+      nodes: z.array(z.unknown()).describe("Array of workflow nodes"),
       connections: z.record(z.string(), z.any()).optional().describe("Node connections"),
       settings: z.record(z.string(), z.any()).optional().describe("Workflow settings"),
-      tags: z.array(z.any()).optional().describe("Workflow tags")
+      tags: z.array(z.unknown()).optional().describe("Workflow tags")
     }).describe("Workflow configuration")
   },
   async ({ workflow }) => {
@@ -121,10 +121,10 @@ server.tool(
     id: z.string().describe("Workflow ID"),
     workflow: z.object({
       name: z.string().optional().describe("Name of the workflow"),
-      nodes: z.array(z.any()).optional().describe("Array of workflow nodes"),
+      nodes: z.array(z.unknown()).optional().describe("Array of workflow nodes"),
       connections: z.record(z.string(), z.any()).optional().describe("Node connections"),
       settings: z.record(z.string(), z.any()).optional().describe("Workflow settings"),
-      tags: z.array(z.any()).optional().describe("Workflow tags")
+      tags: z.array(z.unknown()).optional().describe("Workflow tags")
     }).describe("Updated workflow configuration")
   },
   async ({ id, workflow }) => {
@@ -278,10 +278,10 @@ server.tool(
   {
     workflow: z.object({
       name: z.string().describe("Name of the workflow"),
-      nodes: z.array(z.any()).describe("Array of workflow nodes"),
+      nodes: z.array(z.unknown()).describe("Array of workflow nodes"),
       connections: z.record(z.string(), z.any()).optional().describe("Node connections"),
       settings: z.record(z.string(), z.any()).optional().describe("Workflow settings"),
-      tags: z.array(z.any()).optional().describe("Workflow tags")
+      tags: z.array(z.unknown()).optional().describe("Workflow tags")
     }).describe("Workflow configuration")
   },
   async ({ workflow }) => {
