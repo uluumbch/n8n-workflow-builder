@@ -1,0 +1,15 @@
+node_modules
+build
+build-smithery
+dist
+coverage
+.nyc_output
+test-results
+tests
+*.log
+*.tsbuildinfo
+.env*
+.git
+.github
+.vscode
+*.md
